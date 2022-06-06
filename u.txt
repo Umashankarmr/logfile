@@ -1,1 +1,40 @@
-hi
+ cat integration_server.demo.events.txt
+2022-06-06 13:56:15.092484Z: [Thread 1944206] (Msg 1/1) BIP1990I: Integration server 'demo' starting initialization; version '11.0.0.16' (64-bit)
+2022-06-06 13:56:27.546482Z: [Thread 1944305] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive.
+2022-06-06 13:56:27.557820Z: [Thread 1944305] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections.
+2022-06-06 13:56:27.591550Z: [Thread 1944206] (Msg 1/1) BIP1991I: Integration server has finished initialization.
+2022-06-06 14:20:20.631146Z: [Thread 1944219] (Msg 1/1) BIP2152I: Configuration message received.
+2022-06-06 14:20:20.707244Z: [Thread 1944219] (Msg 1/1) BIP1361E: Message flow node 'ERROR', 'REPLICATE_STREAM_QUEUE#FCMComposite_1_6' in Message flow 'REPLICATE_STREAM_QUEUE', 'REPLICATE_STREAM_QUEUE' requires Policy 'Default' of type 'MQEndpoint' which is not deployed.
+2022-06-06 14:20:20.708936Z: [Thread 1944219] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'Replication&Deletion' of type 'Application'.
+2022-06-06 14:20:20.709016Z: [Thread 1944219] (Msg 1/1) BIP9324W: The request to 'Initialize' the deployed resource 'Replication&Deletion' of type 'Application' has failed.
+2022-06-06 14:20:20.709106Z: [Thread 1944219] (Msg 1/1) BIP9332I: PolicyProject 'REPLICATION_MQ_POLICY' has been created successfully.
+2022-06-06 14:20:20.709158Z: [Thread 1944219] (Msg 1/1) BIP1096E: The source 'rndd.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute.
+2022-06-06 14:20:20.709270Z: [Thread 1944219] (Msg 1/1) BIP2154I: Integration server finished with Configuration message.
+2022-06-06 14:21:52.653612Z: [Thread 1944213] (Msg 1/1) BIP2152I: Configuration message received.
+2022-06-06 14:21:52.709240Z: [Thread 1944213] (Msg 1/1) BIP9339W: The values defined in the policy(s) 'BUFF1_POLICY, QM1_POLICY, BUFF3_POLICY, BUFF2_POLICY' in policy project 'REPLICATION_MQ_POLICY' match the values of the existing policy(s). Any deployed resources using the policy(s) will not be affected by the redeploy of the policy project.
+2022-06-06 14:21:52.726628Z: [Thread 1944213] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'Replication&Deletion' of type 'Application'.
+2022-06-06 14:21:52.921428Z: [Thread 1944213] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'Replication&Deletion' of type 'Application'.
+2022-06-06 14:21:52.921712Z: [Thread 1944213] (Msg 1/1) BIP2269I: Deployed resource 'REMOVE_STREAM_MSG' (uuid='REMOVE_STREAM_MSG',type='MessageFlow') started successfully.
+2022-06-06 14:21:52.921832Z: [Thread 1944213] (Msg 1/1) BIP2269I: Deployed resource 'REPLICATE_STREAM_QUEUE' (uuid='REPLICATE_STREAM_QUEUE',type='MessageFlow') started successfully.
+2022-06-06 14:21:52.921880Z: [Thread 1944213] (Msg 1/1) BIP9332I: Application 'Replication&Deletion' has been changed successfully.
+2022-06-06 14:21:52.921904Z: [Thread 1944213] (Msg 1/1) BIP9326I: The source 'rnd.bar' has been successfully deployed.
+2022-06-06 14:21:52.922092Z: [Thread 1944213] (Msg 1/1) BIP2154I: Integration server finished with Configuration message.
+2022-06-06 14:21:53.934200Z: [Thread 1952641] (Msg 1/2) BIP2628W: Exception condition detected on input node 'REMOVE_STREAM_MSG.ALPHA.MASTERBUFF.APP'.
+2022-06-06 14:21:53.934276Z: [Thread 1952641] (Msg 2/2) BIP2677E: Failed to make a client connection to queue manager 'ALPHA_MASTERBUFF' using hostname '10.250.146.64' on port '1448': MQCC=2; MQRC=2035.
+2022-06-06 14:21:54.937380Z: [Thread 1952642] (Msg 1/5) BIP2628W: Exception condition detected on input node 'REPLICATE_STREAM_QUEUE.TPH.MASTER.STREAM.QUEUE'.
+2022-06-06 14:21:54.937448Z: [Thread 1952642] (Msg 2/5) BIP2230E: Error detected whilst processing a message in node 'REPLICATE_STREAM_QUEUE.Compute'.
+2022-06-06 14:21:54.937480Z: [Thread 1952642] (Msg 3/5) BIP2488E:  (.REPLICATE_STREAM_QUEUE_Compute.Main, 7.1) Error detected whilst executing the SQL statement 'PROPAGATE FINALIZE DEFAULT DELETE DEFAULT;'.
+2022-06-06 14:21:54.937504Z: [Thread 1952642] (Msg 4/5) BIP2230E: Error detected whilst processing a message in node 'REPLICATE_STREAM_QUEUE.ALPHA.MASTERBUFF.APP'.
+2022-06-06 14:21:54.937544Z: [Thread 1952642] (Msg 5/5) BIP2677E: Failed to make a client connection to queue manager 'ALPHA_MASTERBUFF' using hostname '10.250.146.64' on port '1448': MQCC=2; MQRC=2035.
+2022-06-06 14:21:54.939584Z: [Thread 1952642] (Msg 1/1) BIP2648E: Message backed out to a queue; message flow node 'REPLICATE_STREAM_QUEUE.TPH.MASTER.STREAM.QUEUE'.
+2022-06-06 14:23:52.155260Z: [Thread 1952641] (Msg 1/2) BIP2628W: Exception condition detected on input node 'REMOVE_STREAM_MSG.ALPHA.MASTERBUFF.APP'.
+2022-06-06 14:23:52.155356Z: [Thread 1952641] (Msg 2/2) BIP2677E: Failed to make a client connection to queue manager 'ALPHA_MASTERBUFF' using hostname '10.250.146.64' on port '1448': MQCC=2; MQRC=2035.
+2022-06-06 14:27:55.198660Z: [Thread 1952642] (Msg 1/1) BIP2612E: Unable to open IBM MQ dead letter queue: queue manager='TPH_MASTER'; queue='DEAD.LOCAL.TPHMASTER'; MQCC=2; MQRC=2009; 'REPLICATE_STREAM_QUEUE.TPH.MASTER.STREAM.QUEUE'.
+2022-06-06 14:27:55.235764Z: [Thread 1952642] (Msg 1/1) BIP2682W: Unable to rollback a IBM MQ transaction due to a broken connection to the IBM MQ queue manager ('TPH_MASTER'). MQRC=2009.
+2022-06-06 14:27:55.272552Z: [Thread 1952642] (Msg 1/1) BIP2112E: IBM App Connect Enterprise internal error: diagnostic information '2', '2009'.
+2022-06-06 14:27:57.585104Z: [Thread 1952642] (Msg 1/5) BIP2628W: Exception condition detected on input node 'REPLICATE_STREAM_QUEUE.TPH.MASTER.STREAM.QUEUE'.
+2022-06-06 14:27:57.585172Z: [Thread 1952642] (Msg 2/5) BIP2230E: Error detected whilst processing a message in node 'REPLICATE_STREAM_QUEUE.Compute'.
+2022-06-06 14:27:57.585196Z: [Thread 1952642] (Msg 3/5) BIP2488E:  (.REPLICATE_STREAM_QUEUE_Compute.Main, 7.1) Error detected whilst executing the SQL statement 'PROPAGATE FINALIZE DEFAULT DELETE DEFAULT;'.
+2022-06-06 14:27:57.585220Z: [Thread 1952642] (Msg 4/5) BIP2230E: Error detected whilst processing a message in node 'REPLICATE_STREAM_QUEUE.ALPHA.MASTERBUFF.APP'.
+2022-06-06 14:27:57.585252Z: [Thread 1952642] (Msg 5/5) BIP2677E: Failed to make a client connection to queue manager 'ALPHA_MASTERBUFF' using hostname '10.250.146.64' on port '1448': MQCC=2; MQRC=2035.
+2022-06-06 14:27:57.587920Z: [Thread 1952642] (Msg 1/1) BIP2648E: Message backed out to a queue; message flow node 'REPLICATE_STREAM_QUEUE.TPH.MASTER.STREAM.QUEUE'.
